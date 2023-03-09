@@ -27,10 +27,8 @@ This website is a personal portfolio made with the purpose of exploring the real
 
 Alexandre Faísca Coelho - alex.c.2002@gmail.com
 
-<a href="https://pt.linkedin.com/company/neecist" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="neecist" height="30" width="40" /></a>
-<a href="https://www.instagram.com/neecist/?hl=pt" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="neecist" height="30" width="40" /></a>
-<a href="https://www.youtube.com/user/NEECIST" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="neecist" height="30" width="40" /></a>
-<a href="https://www.facebook.com/NEECIST" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="tresa" height="30" width="40" /></a>
+<a href="https://www.linkedin.com/in/alexandre-coelho-2b60b5200/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="neecist" height="30" width="40" /></a>
+<a href="https://www.instagram.com/_al3xaldr3_/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="neecist" height="30" width="40" /></a>
 
 <p align="right">(<a href="#logo">back to top</a>)</p>
 
