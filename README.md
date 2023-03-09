@@ -6,11 +6,8 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Web_browser_icon_symbolic_pink.svg" alt="Logo" height="110" width="110">
   </a>
 
-  <h3 align="center">WEBSITE</h3>
-
-  <p align="center">
-    Independently Created Portfolio Website
-  </p>
+  <h3 align="center">WebDev</h3>
+  <p align="center"> Portfolio Website </p>
 </div>
 
 
