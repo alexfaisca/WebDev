@@ -36,4 +36,4 @@ Alexandre Faísca Coelho - alex.c.2002@gmail.com
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[website-screenshot]: https://raw.githubusercontent.com/alexfaisca/WebDev/main/assets/img/Screenshot%20from%202023-03-09%2019-53-12.png
+[website-screenshot]: https://raw.githubusercontent.com/alexfaisca/WebDev/main/assets/img/website_screenchot.png
