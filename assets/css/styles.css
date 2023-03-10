@@ -18,7 +18,7 @@
   --lig: 72%;
   --second-hue: 240;
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
-  --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 50%); /* -4% */
   --title-color: hsl(var(--second-hue), 15%, 95%);
   --text-color: hsl(var(--second-hue), 8%, 75%);
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
@@ -46,6 +46,10 @@
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
+
+  /* logo */
+  --logo-white: url("https://raw.githubusercontent.com/alexfaisca/WebDev/main/assets/img/logo_white.png");
+  --logo-black: url("https://raw.githubusercontent.com/alexfaisca/WebDev/main/assets/img/logo_black.png");
 }
 
 /* Responsive typography */
@@ -207,6 +211,14 @@ body.light-theme{
 
 .nav__logo:hover{
   color: var(--first-color-alt);
+}
+
+.nav__img {
+  position: relative;
+  top: 3px;
+  content: var(--logo-black);
+  width: 20px;
+  height: 20px;
 }
 
 
@@ -792,7 +804,7 @@ height: 4rem;
   }
 
   .skills__box{
-    column-gap: 1 rem;
+    column-gap: 1rem;
   }
 
   .skills__name{
