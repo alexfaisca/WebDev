@@ -22,6 +22,8 @@
   --title-color: hsl(var(--second-hue), 15%, 95%);
   --text-color: hsl(var(--second-hue), 8%, 75%);
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
+  --nav-text-color: black;
+  --nav-text-color-light: white;
   --body-color: hsl(var(--second-hue), 48%, 8%);
   --container-color: hsl(var(--second-hue), 32%, 12%);
 
@@ -136,7 +138,6 @@ body.light-theme{
   --container-color: #fff;
 }
 
-
 /*========== 
     Color changes in some parts of 
     the website, in light theme
@@ -203,14 +204,18 @@ body.light-theme{
   align-items: center;
 }
 
-.nav__logo{
-  color: var(--first-color);
+.nav__text{
+  color: var(--nav-text-color);
   font-weight: var(--font-medium);
   transition: .4s;
 }
 
-.nav__logo:hover{
+.nav__text:hover{
   color: var(--first-color-alt);
+}
+
+.nav__text.light-theme{
+  color: var(--nav-text-color-light);
 }
 
 .nav__img {
@@ -219,6 +224,10 @@ body.light-theme{
   content: var(--logo-black);
   width: 20px;
   height: 20px;
+}
+
+.nav__img.light-theme{
+  content: var(--logo-white);
 }
 
 
