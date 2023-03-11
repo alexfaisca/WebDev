@@ -336,6 +336,7 @@ body.light-theme{
 /*=============== ABOUT ===============*/
 .about__container{
   row-gap: 2.5rem;
+  flex-wrap: wrap;
 }
 
 .about__data{
@@ -355,7 +356,7 @@ body.light-theme{
 
 .about__box{
   background-color: var(--container-color);
-  border-radius: .75rem;
+  border-radius: 0.9rem;
   padding: .75rem .5rem;
 }
 
@@ -379,9 +380,15 @@ body.light-theme{
 }
 
 /*=============== SKILLS ===============*/
+
 .skills__container{
-  row-gap: 2rem;
-  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: .75rem;
+  row-gap: .75rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .skills__content{
@@ -406,7 +413,6 @@ body.light-theme{
 
 .skils__group{
   display: grid;
-  align-content: flex-start;
   row-gap: 1rem;
 }
 
@@ -428,6 +434,11 @@ body.light-theme{
 
 .skills__level{
   font-size: var(--tiny-font-size);
+}
+
+.column {
+  float: left;
+  width: 33.33%;
 }
 
 
@@ -805,7 +816,12 @@ height: 4rem;
   }
 
   .about__info{
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .75rem;
+    row-gap: .75rem;
+    flex-wrap: wrap;
   }
 
   .about__data > img {
@@ -866,10 +882,6 @@ height: 4rem;
   }
   .about__data > img {
     width: 45vw;
-  }
-
-  .skills__container{
-    justify-content: center;
   }
 
   .skills__content{
@@ -964,7 +976,11 @@ height: 4rem;
   }
 
   .skills__container{
-    grid-template-columns: repeat(2, 350px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: .75rem;
+    margin-bottom: 2rem;
   }
 
   .work__container{
