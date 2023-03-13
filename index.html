@@ -29,28 +29,35 @@
     <!--=============== HEADER ===============-->
     <header class="header" id="header">
       <nav class="nav container">
-        <div>
-          <span>
-            <a href="#home"><img href="#home" class="nav__img" id="nav-img"/></a>
-          </span>
-          <span>
+        <div class="nav__logo">
+          <!--=============== LOGO ===============-->
+          <span class="">
+            <a href="#home"><img href="#home" class="nav__img light" id="nav-img-black"/><img href="#home" class="nav__img dark" id="nav-img-white"/></a>
             <a href="#home" class="nav__text" id="home-ref">alex</a>
           </span>
         </div>
-        <div>
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" >
           <!-- Projects href -->
-          <span style="margin-left: 20px; margin-right: 20px">
+          <span class="nav__menu__item">
             <a class="nav__text" href="#about" id="about-ref">About</a>
           </span>
-          <span style="margin-left: 20px; margin-right: 20px">
+          <span class="nav__menu__item">
             <a class="nav__text" href="#work" id="projects-ref">Projects</a>
           </span>
           <!-- Theme change button -->
-          <span style="margin-left: 10px; margin-right: 10px">
+          <span class="icon">
             <i class="bx bx-moon change-theme" id="theme-button"></i>
           </span>
         </div>
-
+        <div class="nav__menu__dropdown" id="dmenu">
+          <button onclick="dropdownMenu()" class="nav__menu__dropdown__button" id="dropdown-menu-button"><i class='bx bx-menu bx-border bx-xs' id="dbutton"></i></button>
+          <div id="dropdown-menu" class="nav__menu__dropdown__content">
+            <a href="#about">About</a>
+            <a href="#work">Projects</a>
+            <a href="#home" onclick="toggle_light_theme()" > <i class="icon bx bx-moon change-theme" id="theme-button-dropdown"></i></a>
+          </div>
+        </div>
       </nav>
     </header>
     <!--=============== MAIN ===============-->s
@@ -70,7 +77,9 @@
       <section class="home section" id="home">
         <div class="home__data">
           <div class="home__container container grid">
-            <span class="home__greeting">Hello 👋, I'm</span>
+            <div class="avatar__container">
+            <img class="home__avatar" src="assets/img/fotografia.jpg" alt="avatar">
+            </div>
             <h1 class="home__name">Alexandre</h1>
             <h3 class="home__education">Computer Science Alumni @IST</h3>
 
@@ -83,7 +92,7 @@
       </section>
 
       <!--=============== ABOUT ===============-->
-      <section class="about section" id="about">
+      <section class="about section about__section" id="about">
         <span class="section__subtitle">A Little Bit</span>
         <h2 class="section__title">About me</h2>
 
@@ -109,19 +118,19 @@
               </div>
             </div>
 
-            <p class="about__description">Originally from Loulé, Algarve, now living and studying in Lisbon <span><a href="https://tecnico.ulisboa.pt/en/" target="_blank" style="color: var(--first-color)">@técnico</a></span>. I'm interested in computer science as a whole and eager to learn. </p>
+            <p class="about__description">Originally from Loulé, Algarve, now living and studying in Lisbon <span><a href="https://tecnico.ulisboa.pt/en/" target="_blank" class="active-link">@técnico</a></span>. I'm interested in computer science as a whole and eager to learn. </p>
 
             <a href="#contact" class="button">Get in touch <i class="bx bx-down-arrow-alt bx-xs" ></i></a>
           </div>
           <div class="about__data">
-            <img src="/assets/img/logo.png" />
+            <img class="about__image" src="/assets/img/programming.jpg" alt="programming"/>
           </div>
         </div>
       </section>
 
       <!--=============== SKILLS ===============-->
 
-      <section>
+      <section class="" id="skills">
         <span class="section__subtitle">Some Of My</span>
         <h2 class="section__title">Skills</h2>
         <div class="skills__container container">
@@ -225,9 +234,8 @@
               </div>
             </div>
           </div>
-
-              <!--=============== OTHER ===============-->
-              <div class="skills__content">
+          <!--=============== OTHER ===============-->
+          <div class="skills__content">
                 <h3 class="skills__title">Other</h3>
 
                 <div class="skills__box">
@@ -286,63 +294,61 @@
 
         <div class="work__filters">
           <span class="work__item active-work" data-filter="all">All</span>
-          <span class="work__item" data-filter=".programacao">C</span>
-          <span class="work__item" data-filter=".eletronica">C++</span>
-          <span class="work__item" data-filter=".energia">Java</span>
-          <span class="work__item" data-filter=".robotica">Python</span>
-          <span class="work__item" data-filter=".robotica">More</span>
+          <span class="work__item" data-filter=".c">C</span>
+          <span class="work__item" data-filter=".cpp">C++</span>
+          <span class="work__item" data-filter=".java">Java</span>
+          <span class="work__item" data-filter=".python">Python</span>
+          <span class="work__item"> <a href="https://github.com/alexfaisca" class="active-link" target="_blank">More <i class='bx bxl-github' ></i></a></span>
+          <!--<span class="work__item"> <a href="#portfolio"></a>More <i class='bx bxs-direction-left bx-rotate-180' ></i></span>-->
         </div>
-        <!--=============== PYTHON ===============-->
+
+
+
         <div class="work__container container grid">
 
-          <div class="work__card mix programacao">
-            <img src="assets/img/python1.jpg" alt="" class="work__img" />
-            <h3 class="work__title">Python</h3>
+          <!--=============== C ===============-->
+          <div class="work__card c">
+            <img src="assets/img/word_path.jpg" alt="" class="work__img" />
 
-            <a onclick="openPopout(this)" id="python" class="work__button"> Mais informações <i class="bx bx-right-arrow-alt work__icon"></i> </a>
+            <h3 class="work__title"> Word Path Finder </h3>
+
+            <a onclick="openPopout(this)" id="c" class="work__button"> About <i class="bx bx-right-arrow-alt work__icon"></i> </a>
           </div>
+
           <!--=============== C++ ===============-->
 
-          <div class="work__card mix eletronica programacao">
-            <img src="assets/img/neecduino.jpg" alt="" class="work__img" />
+          <div class="work__card cpp">
+            <img src="assets/img/hangman.jpg" alt="" class="work__img" />
 
-            <h3 class="work__title">C++</h3>
+            <h3 class="work__title"> Hangman </h3>
 
-            <a onclick="openPopout(this)" id="arduino" class="work__button"> Mais informações <i class="bx bx-right-arrow-alt work__icon"></i> </a>
+            <a onclick="openPopout(this)" id="cpp" class="work__button"> About <i class="bx bx-right-arrow-alt work__icon"></i> </a>
           </div>
 
           <!--=============== JAVA ===============-->
-          <div class="work__card mix energia">
-            <img src="assets/img/levitaneec1.JPG" alt="" class="work__img" />
+          <div class="work__card java">
+            <img src="assets/img/bank_app.png" alt="" class="work__img" />
 
-            <h3 class="work__title">Java</h3>
+            <h3 class="work__title"> Bank App </h3>
 
-            <a onclick="openPopout(this)" id="levitaneec" class="work__button"> Mais informações <i class="bx bx-right-arrow-alt work__icon"></i> </a>
+            <a onclick="openPopout(this)" id="java" class="work__button"> About <i class="bx bx-right-arrow-alt work__icon"></i> </a>
           </div>
 
-          <!--=============== WEBDEV ===============-->
-          <div class="work__card mix programacao">
-            <img src="assets/img/webdev1.jpg" alt="" class="work__img" />
+          <!--=============== PYTHON ===============-->
+          <div class="work__card python">
+            <img src="assets/img/tictactoe.jpg" alt="" class="work__img" />
+            <h3 class="work__title"> Tic-Tac-Toe & Hangman Games </h3>
 
-            <h3 class="work__title">Web Dev</h3>
-
-            <a onclick="openPopout(this)" id="webdev" class="work__button"> Mais informações <i class="bx bx-right-arrow-alt work__icon"></i> </a>
+            <a onclick="openPopout(this)" id="python" class="work__button"> About <i class="bx bx-right-arrow-alt work__icon"></i> </a>
           </div>
 
-          <!--=============== C ===============-->
-          <div class="work__card mix eletronica robotica">
-            <img src="assets/img/neecbot3.JPG" alt="" class="work__img" />
+        </div>>
 
-            <h3 class="work__title">C</h3>
-
-            <a onclick="openPopout(this)" id="neecbot" class="work__button"> Mais informações <i class="bx bx-right-arrow-alt work__icon"></i> </a>
-          </div>
-        </div>
         <div class="popout__container hidden">
-          <div id="card-python" class="popout__item hidden">
+          <div id="card-c" class="popout__item hidden">
             <div class="popout__header">
               <div class="popout__title">
-                <h1>Python</h1>
+                <h1>Word Path Finder</h1>
               </div>
               <a onclick="closePopout(this); return">
                 <i class="bx bx-x"></i>
@@ -357,19 +363,21 @@
             </div>
             <div class="popout__main">
               <div class="popout__text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ratione eligendi cupiditate atque, repellendus quae, ut laborum quisquam earum consequatur nesciunt omnis est nulla
-                corrupti labore ex porro suscipit dolor.
+                Solution to the word path problem using a Dijkstra's algorithm on a directed graph.
               </div>
               <div class="popout__links">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ducimus minus sequi ex iure nemo harum neque blanditiis animi quam temporibus at, mollitia numquam, explicabo
-                consectetur, fugiat quisquam totam eos?
+                <ul>
+                <li>
+                  <a class="work__button" href="#work" target="_self"><i class="work-icon bx bxl-github"></i> Github (unavailable)</a>
+                </li>
+                </ul>
               </div>
             </div>
           </div>
-          <div id="card-arduino" class="popout__item hidden">
+          <div id="card-cpp" class="popout__item hidden">
             <div class="popout__header">
               <div class="popout__title">
-                <h1>Arduino</h1>
+                <h1>Hangman Game</h1>
               </div>
               <a onclick="closePopout(this); return">
                 <i class="bx bx-x"></i>
@@ -384,22 +392,21 @@
             </div>
             <div class="popout__main">
               <div class="popout__text">
-                This the Simon game in a portable console, designed by our members. The game presents a sequence of colours, which the player must reproduce in the correct order in order to win points
-                and move across levels.
+                Hangman game implementing a client server architecture using UDP to exchange messages and TCP to transfer documents.
               </div>
               <div class="popout__links">
                 <ul>
                   <li>
-                    <a class="work__button" href="https://github.com/NEECIST/NEECSimon"><i class="work-icon bx bxl-github"></i> Github</a>
+                    <a class="work__button" href="https://github.com/alexfaisca/ServerPlayerGame"><i class="work-icon bx bxl-github"></i> Github</a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div id="card-levitaneec" class="popout__item hidden">
+          <div id="card-java" class="popout__item hidden">
             <div class="popout__header">
               <div class="popout__title">
-                <h1>LevitaNEEC</h1>
+                <h1>Banking Application</h1>
               </div>
               <a onclick="closePopout(this); return">
                 <i class="bx bx-x"></i>
@@ -414,22 +421,21 @@
             </div>
             <div class="popout__main">
               <div class="popout__text">
-                This the Simon game in a portable console, designed by our members. The game presents a sequence of colours, which the player must reproduce in the correct order in order to win points
-                and move across levels.
+                Banking application in java. Implementing a multiple client multiple server architecture. Built using <a style="color: var(--first-color)" href="https://maven.apache.org/index.html" target="_blank">maven</a>. (In progress)
               </div>
               <div class="popout__links">
                 <ul>
                   <li>
-                    <a class="work__button" href="https://github.com/NEECIST/NEECSimon"><i class="work-icon bx bxl-github"></i> Github</a>
+                    <a class="work__button" href="#work" target="_self"><i class="work-icon bx bxl-github"></i> Github (unavailable)</a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div id="card-neecbot" class="popout__item hidden">
+          <div id="card-python" class="popout__item hidden">
             <div class="popout__header">
               <div class="popout__title">
-                <h1>NEECBot</h1>
+                <h1>Python Games</h1>
               </div>
               <a onclick="closePopout(this); return">
                 <i class="bx bx-x"></i>
@@ -444,12 +450,12 @@
             </div>
             <div class="popout__main">
               <div class="popout__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nam dolores porro similique sint. Ipsam ad natus facilis autem laborum rem illum? Autem sequi dignissimos delectus omnis quasi numquam doloribus.
+                Tic-Tac-Toe and Nine Men's Morris games in python with solvers. The former through the know rules and the latter through the application of the minmax algorithm.
               </div>
               <div class="popout__links">
                 <ul>
                   <li>
-                    <a class="work__button" href="https://github.com/NEECIST/NEECSimon"><i class="work-icon bx bxl-github"></i>Github</a>
+                    <a class="work__button" href="https://github.com/alexfaisca/Tic-Tac-Toe-Nine-Mens-Morris"><i class="work-icon bx bxl-github"></i>Github</a>
                   </li>
                 </ul>
               </div>
@@ -462,12 +468,7 @@
       <section class="contact section" id="contact">
         <span class="section__subtitle">Get in touch</span>
         <h2 class="section__title">Contact Me</h2>
-
-        <div class="contact__container container grid">
-          <div class="contact__content">
-            <h3 class="contact__title">Talk to me</h3>
-
-            <div class="contact__info">
+          <div class="contact__container container grid">
               <div class="contact__card">
                 <i class="bx bx-envelope"></i>
                 <h3 class="contact__card-title">Email</h3>
@@ -486,30 +487,6 @@
                 <span class="contact__card-data">@_al3xaldr3_</span>
               </div>
             </div>
-          </div>
-
-          <div class="contact_content">
-            <h3 class="contact__title">Write me your project</h3>
-
-            <form onsubmit="return false" class="contact__form">
-              <div class="contact__form-div">
-                <label for="" class="contact__form-tag">Name: </label>
-                <input type="text" placeholder="Insert your name" class="contact__form-input" />
-              </div>
-
-              <div class="contact__form-div">
-                <label for="" class="contact__form-tag">Mail: </label>
-                <input type="email" placeholder="Insert your email" class="contact__form-input" />
-              </div>
-
-              <div class="contact__form-div contact__form-area">
-                <label for="" class="contact__form-tag">Message: </label>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Insert your message" class="contact__form-input"></textarea>
-              </div>
-              <button onclick="submitForm()" class="button">Send Message</button>
-            </form>
-          </div>
-        </div>
       </section>
     </main>
 
