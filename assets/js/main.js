@@ -65,11 +65,14 @@ const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-sun
 if (selectedTheme) {
     let icon = getCurrentIcon(), theme = getCurrentTheme()
     //If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the light
-    if(theme == 'dark' && icon != iconTheme || icon != selectedIcon) {
+    if(icon != selectedIcon ) {
+        if(theme == 'light') {
         themeButtonDrop.classList.toggle(iconTheme)
         themeButton.classList.toggle(iconTheme)
+        }
+        else localStorage.setItem('selected-theme', getCurrentTheme())
     }
-    if(theme == 'dark') {
+    if(theme == 'light') {
         navImg.forEach((z) => {
             z.classList.toggle(lightTheme);
         });
@@ -77,10 +80,12 @@ if (selectedTheme) {
             z.classList.toggle(lightTheme);
         });
     }
-    if(theme == 'dark' && theme != lightTheme || theme != selectedTheme)
-        document.body.classList.toggle(lightTheme)
-
-
+    if(theme != selectedTheme) {
+        if(theme == 'dark') document.body.classList.toggle(lightTheme)
+        else localStorage.setItem('selected-theme', getCurrentTheme())
+    }
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
 }
 
 function toggle_light_theme() {
